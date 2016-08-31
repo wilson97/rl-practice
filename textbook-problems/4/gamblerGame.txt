@@ -1,0 +1,4 @@
+We need an object that represents the current state of the Gambler. This is his money. (and his possible actions with the money?)
+We also need an object that represents the current state of the model. This includes the state values and gamma value.
+
+So in our outer loop, we initialize a gambler that has 1-99 amount of money. Then we calculate the best possible value from that state based on the current model, and update V(s) to that max value. We do this (initalize 99 Gamblers, find the maxes, etc.) until the updates become very small. Basically we probably don't even need a Gambler, all we need is the states. So no object-oriented nonsense is necessary.   
