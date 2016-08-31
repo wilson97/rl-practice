@@ -1,0 +1,11 @@
+Initialize V(s) = 0 for all S
+
+Repeat
+	Delta = 0
+	for each s in S
+		v = V(s)
+		V(s) = max(sum over s', r (P * (r + yV(s'))))
+		Delta = max(Delta, abs(v - V(s)))
+	until Delta is small
+
+Policy is pi(s) = argmax(sum(the thing at the top))
