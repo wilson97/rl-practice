@@ -1,3 +1,6 @@
+import matplotlib.pyplot as plt
+import numpy as np
+
 #first, initialize the state and policy arrays;
 policyArray = [0 for x in range(101)]
 stateArray = [0 for x in range(101)]
@@ -39,3 +42,8 @@ while (delta > limit):
 print(stateArray);
 print("\n");
 print(policyArray);
+
+#graphs
+plt.bar(np.arange(101), policyArray)
+#plt.axis([0, 100, 0, 1])
+plt.show()
